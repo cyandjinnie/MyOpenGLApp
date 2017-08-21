@@ -1,7 +1,7 @@
 #include	<Windows.h>
 #include	<stdlib.h>
 #include	<stdio.h>
-#include	"InputControl.h"
+#include	"Input/InputControl.h"
 #include	"Application.h"
 #include	<GLFW/glfw3.h>
 

@@ -5,10 +5,10 @@
 
 #include	<string>
 #include	<windows.h>
-#include	"MyTypes.h"
-
-#include	<GL\glew.h>
-#include	<GLFW\glfw3.h>
+#include	"Utils/MyTypes.h"
+#include	<GL/glew.h>
+#include	<GLFW/glfw3.h>
+#include	"State/BaseState.h"
 
 class Application
 {
@@ -30,6 +30,8 @@ private:
 	static void WindowCursorPosCallback(GLFWwindow* window, double xpos, double ypos);
 
 	bool CreateAppWindow(const char* title, u_int width, u_int height);
+
+	BaseState* CurrentState;
 };
 
 #endif
