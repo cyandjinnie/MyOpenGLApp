@@ -1,7 +1,9 @@
 #ifndef __DRAWABLE_OBJECT_H__
 #define __DRAWABLE_OBJECT_H__
 
-class DrawableObject
+#include "Entity.h"
+
+class DrawableObject : public Entity
 {
 public:
 	DrawableObject();

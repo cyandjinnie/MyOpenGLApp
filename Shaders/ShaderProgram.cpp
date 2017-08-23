@@ -1,5 +1,6 @@
 #include "ShaderProgram.h"
-#include "Utils\Exceptions.h"
+#include "../Utils/Exceptions.h"
+
 #include <fstream>
 #include <memory>
 #include <windows.h>
@@ -149,4 +150,9 @@ void ShaderProgram::LoadShaders(const char* vertex_filepath, const char* fragmen
 
 	glDeleteShader(VertexShader);
 	glDeleteShader(FragmentShader);
+}
+
+GLuint ShaderProgram::GetID() const 
+{
+	return this->ProgramID;
 }

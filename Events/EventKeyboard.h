@@ -6,6 +6,7 @@
 class EventKeyboard : public Event
 {
 public:
+
 	enum KeyCodes
 	{
 		KEY_UNKNOWN = -1,
@@ -129,20 +130,12 @@ public:
 		KEY_RIGHT_ALT = 346,
 		KEY_RIGHT_SUPER = 347,
 		KEY_MENU = 348
-	};
-	enum Type
-	{
-		UNKNOWN,
-		ON_KEY_PRESSED,
-		ON_KEY_RELEASED
-	};
+	}; // Deprecated
 
-	EventKeyboard();
-	EventKeyboard(KeyCodes _code, Type _type);
+	EventKeyboard(KeyCodes _code);
 	~EventKeyboard();
 
 	KeyCodes keyCode;
-	Type type;
 };
 
 #endif

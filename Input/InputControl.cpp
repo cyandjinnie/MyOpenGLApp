@@ -1,4 +1,5 @@
 #include "InputControl.h"
+#include "../Application.h"
 
 InputControl::InputControl()
 {
@@ -11,7 +12,12 @@ InputControl* InputControl::GetInstance()
 	return &instance;
 }
 
-int InputControl::foo(int _in)
+void InputControl::DispatchOnKeyPressed(const EventKeyboard& eventKeyboard)
 {
-	return _in;
+
+}
+
+void InputControl::DispatchOnKeyReleased(const EventKeyboard& eventKeyboard)
+{
+	PostQuitMessage(0);
 }

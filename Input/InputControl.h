@@ -1,15 +1,16 @@
 #ifndef __INPUT_CONTROL_H__
 #define __INPUT_CONTROL_H__
 
-class InputControl
+#include "../Events/EventKeyboard.h"
+#include "../Utils/Singleton.h"
+
+class InputControl : public Singleton
 {
 public:
 	static InputControl* GetInstance();
 
-	int foo(int _in);
-
-	InputControl(InputControl const&)		= delete;
-	void operator=(InputControl const&)		= delete;
+	void DispatchOnKeyPressed(const EventKeyboard&);
+	void DispatchOnKeyReleased(const EventKeyboard&);
 private:
 	InputControl();
 };

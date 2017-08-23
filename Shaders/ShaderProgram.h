@@ -23,6 +23,7 @@ public:
 	};
 
 	void LoadShaders(const char* vertex_filepath, const char* fragment_filepath);
+
 	GLuint GetID() const;
 
 private:

@@ -1,7 +1,9 @@
 #ifndef __EVENT_MANAGER_H__
 #define __EVENT_MANAGER_H__
 
-class EventManager
+#include "../Utils/Singleton.h"
+
+class EventManager : public Singleton
 {
 private:
 	EventManager();
